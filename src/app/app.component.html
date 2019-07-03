@@ -1,0 +1,11 @@
+<div *ngIf="temp">
+  <div *ngFor="let x of temp; let i = index">
+    <div (click)="showMethod(x, (flag[i] = !flag[i]), i)">
+      {{ x }} : Section for Div.
+    </div>
+
+    <div *ngIf="xy[i] === x && flag[i]">
+      <div class="row container-fluid">Content {{ x }}</div>
+    </div>
+  </div>
+</div>
